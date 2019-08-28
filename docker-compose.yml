@@ -1,5 +1,5 @@
 # Creates and runs fargate-hello
-# docker-compose run
+# docker-compose up
 version: "3"
 
 services:
