@@ -1,0 +1,15 @@
+# Application
+.env
+logs
+
+# Python artifacts
+__pycache__
+.venv
+.pytest_cache
+.coverage
+
+# Pycharm
+.idea
+
+# Sqlite
+*.db

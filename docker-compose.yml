@@ -1,0 +1,10 @@
+# Creates and runs fargate-hello
+# docker-compose run
+version: "3"
+
+services:
+  fargate-hello:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fargate_hello
