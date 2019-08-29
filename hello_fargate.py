@@ -1,12 +1,21 @@
+import os
+
 import requests
+
+from dotenv import load_dotenv
 
 
 def send_slack_message():
     """ Send message to slack"""
+    web_hook = os.getenv("SLACK_WEB_HOOK", "NOT_SET")
+
+    if web_hook == "NOT_SET":
+        raise ValueError("Web Hook Env Var not set")
+
     response = requests.post(
-        "https://hooks.slack.com/services/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",
+        web_hook,
         json={
-            "text": "Hello Fargate :smile:"
+            "text": "Hello FOSS4G :smile:"
         },
     )
 
@@ -14,5 +23,6 @@ def send_slack_message():
 
 
 if __name__ == "__main__":
+    load_dotenv()
     print("Sending message")
     send_slack_message()
