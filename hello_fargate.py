@@ -6,7 +6,7 @@ def send_slack_message():
     response = requests.post(
         "https://hooks.slack.com/services/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",
         json={
-            "text": "Hello Fargate :smile:"
+            "text": "Hello FOSS4G :smile:"
         },
     )
 
